@@ -1,0 +1,437 @@
+
+<!doctype html>
+<html lang="en" class="view html5-player">
+<head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+        <base id="cerosBase">
+
+        <script type="text/javascript">
+            (function () {
+                var locationWithNoQuery = document.location.href.split('?')[0].split('#')[0];
+                locationWithNoQuery = locationWithNoQuery.replace(/[><\(\)'"]/g,'');
+
+                if (document.location.pathname.match(/\.html$/)) {
+                    window.cerosBaseUrl = locationWithNoQuery.replace(/[^\/]*\.html$/, '');
+                } else {
+                    window.cerosBaseUrl = locationWithNoQuery.replace(/(\/p|\/page)\/[a-z0-9-]*\/?$/, '/');
+                }
+
+                document.getElementById('cerosBase').href = window.cerosBaseUrl;
+            })();
+        </script>
+
+
+        <script type="text/javascript" src="assets/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="assets/webfont-1.6.3.js"></script>
+
+    <script type="text/javascript">
+        window.cerosContext = {
+        viewAssetsDomain    : '',
+            publicAssetsBaseUrl: 'assets/',
+            isEmbedded: top != window,
+            isVanityDomain: location.hostname !== 'view.ceros.com',
+            previewMode: false,
+            logging: {
+            emitDevWarnings : false,
+                modes: {
+                        'debug': false,
+                        'info': false,
+                        'warn': true,
+                        'error': true
+                }
+            },
+            usePageSlugsInNavigation: false,
+            usePreviewBanner: false,
+            useDocumentLoadingSpinner: true,
+            analyticsApplicationKey: 'player',
+            analyticsMaxDwellTime: 1800,
+            analyticsUrl: '',
+            apiVersion: 'v1',
+            revalidateWithCore: false,
+
+            ajaxCaching: true,
+        mediaDomainMap: null,
+            rollbarPlayerAccessKey: '61d7450b926c4268b5f89b75862f33a9',
+            deploymentName: 'prod',
+            appVersion: '6.16.1',
+            rollbarMaxItems: 5,
+        isExported: true,
+            isStudio: false,
+
+            openGraphUrl: '',
+            accountSlug: 'tablesafe',
+        gracePeriodExpired  : 9007199254740991 < Date.now() / 1000,
+            appSlug: 'published-live-works',
+            issueAliasSlug: 'interactive-floorplan-6-1-1-1',
+            issue: {"status":"published","htmlLanguage":"en","id":329476,"slug":"experience-5e85430369c76","projectId":30769,"name":"Interactive Floorplan Final","wipExperienceVersionId":1085289,"publishedExperienceVersionId":1097411,"createdByMemberId":8366,"primaryIssueAliasId":447485,"creationDate":"2020-04-02T01:42:27.000Z","lastModifiedDate":"2020-04-09T18:57:20.000Z","deletionDate":null,"firstPublishedDate":"2020-04-02T01:56:49.000Z","firstPageThumbnailUrl":"//media-s3-us-east-1.ceros.com/tablesafe/studio-thumbnails/page-5e854302e4988.jpg","importLinkShared":0,"lastPublishedDate":"2020-04-09T18:57:30.000Z","lastModifiedByMemberId":8365,"lastPublishedByMemberId":8365,"passwordProtected":0,"auth0UserId":null,"isTemplate":0,"templateSubtitle":null,"templateThumbnailUrl":null,"title":"Interactive Floorplan Final"},
+            docVersion: {"loadLowRes":1,"seoNoIndex":0,"lazyLoading":0,"forceLineMode":0,"pageNamesInTitle":0,"id":1097411,"slug":"experience-version-5e8f701a7f403","committedJsonUrl":"http://media-s3-us-east-1.ceros.com/tablesafe/doc-version-json/v11/experience-version-5e8f701a7f403.js","themingBackgroundImageUri":null,"seoTitleKeywords":"","seoMetaKeywords":"","seoMetaDescription":"","canonicalUrlOverride":"","editorPagesManifest":[{"uri":"/v1/account/tablesafe/pages/page-5e8f701a7f41b","initiallyDisabled":false,"thumbnail":"http://media-s3-us-east-1.ceros.com/tablesafe/page-thumbnails/2020/04/09/be854ae6f2b7b06e283898d87b63d481/page-thumbnail.jpg?imageOpt=1&crop=870,489,x0,y0"}],"seoNoscriptHtml":"","customerBodyHtml":null,"cdeExportUrl":null,"tarExportUrl":null,"exportAppVersion":null,"experienceId":329476,"committedByMemberId":8365,"creationDate":"2020-04-09T18:57:30.000Z","modificationDate":"2020-04-09T18:57:30.000Z","publishedDate":"2020-04-09T18:57:30.000Z","unsupportedBrowserRedirectUrl":null,"ogTitle":null,"ogDescription":null,"ogImageUrl":null,"twitterTitle":null,"twitterDescription":null,"twitterImageUrl":null,"twitterHandle":null,"layoutSettings":{"layoutPrimarySetting":null,"maxTabletWidthBreakpoint":null,"maxMobileWidthBreakpoint":null,"deviceTypeMissingVariantFallback":null},"carousel":{"enabled":0,"autoTransition":0,"autoTransitionDelay":"5"},"theming":{"arrowsEnabled":1,"swipeEnabled":1,"menuEnabled":0,"backgroundColor":"#FFFFFF","menuFgColor":"#FFFFFF","menuBgColor":"#000000","backgroundImage":null}},
+            fontManifest: {"Google|Roboto|400|normal":{"familyName":"Roboto","familyGuid":"Google|Roboto","fontWeight":400,"fontStyle":"normal","unitsPerEm":2048,"ascent":1536,"variantGuid":"Google|Roboto|400|normal","variantName":"Normal","cssFamilyName":"Roboto","api":"Google"},"Uploaded|d5a46c45-3d30-11e8-88f3-0e55d9bc9e68":{"familyName":"Tahoma","familyGuid":"Uploaded|d3ca1f3b-3d30-11e8-88f3-0e55d9bc9e68","fontWeight":400,"fontStyle":"normal","unitsPerEm":2048,"ascent":1638,"variantGuid":"Uploaded|d5a46c45-3d30-11e8-88f3-0e55d9bc9e68","variantName":"BD","cssFamilyName":"Tahoma-BD-QR7q04UQ","cssFileURL":"fonts/81a13317-0ba4-4f82-a26d-7004d30efd16/tahomabd.css","api":"Uploaded","woffFileURL":null},"Uploaded|d5a46a38-3d30-11e8-88f3-0e55d9bc9e68":{"familyName":"Tahoma","familyGuid":"Uploaded|d3ca1f3b-3d30-11e8-88f3-0e55d9bc9e68","fontWeight":400,"fontStyle":"normal","unitsPerEm":2048,"ascent":1638,"variantGuid":"Uploaded|d5a46a38-3d30-11e8-88f3-0e55d9bc9e68","variantName":"Normal","cssFamilyName":"Tahoma-Normal-CrJjpDQh","cssFileURL":"fonts/246a392c-9358-451c-bea0-c46ca8c93b03/tahoma.css","api":"Uploaded","woffFileURL":null}},
+        whiteLabeling   : true,
+        isTrialAccount      : false,
+        allowCommerceIntegration  : false,
+        allowEmbeddedPlayerSdk    : false,
+        allowAdaptiveLayouts: true,
+            commerceSettings: {
+            panelWidth      : null,
+            panelHeight     : null,
+                productUrl: '',
+                shoppingCartUrl: '',
+            },
+                themeObj: {
+                arrowsEnabled    : true,
+                swipeEnabled     : true,
+                menuEnabled      : false,
+                    menuFgColor: '#FFFFFF',
+                    menuBgColor: '#000000',
+                    menuHoverOpacity: 0.6,
+                    backgroundColor: '#FFFFFF',
+                backgroundImage  :
+                        null
+
+                },
+            googleFontUrl: '',
+            featureFlags: {"Password Protected Experiences":false,"Getty Image Integration":false,"Getty Video Integration":false,"Accessibility":false},
+            analyticsTrackers: {
+                cerosPlayerTracker: {enabled: true },
+                googleAnalyticsTracker: {"enabled":false},
+                googleTagManagerTracker: {"enabled":false},
+                marketoTracker: {enabled: false, accountId: '' },
+                eloquaTracker: {enabled: false, siteId: '', cookieDomain: ''}
+            }
+        };
+    </script>
+
+    <!--
+      DISPLAY SETTINGS
+    -->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta name="monitor-signature" content="monitor:player:html5"/>
+
+    <title>Interactive Floorplan Final</title>
+
+
+
+
+    <meta property="og:title" content="Interactive Floorplan Final"/>
+        <meta property="og:image" content="media/be854ae6f2b7b06e283898d87b63d481/page-thumbnail.jpg"/>
+    <meta property="og:description" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:type" content="website"/>
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Interactive Floorplan Final">
+    <meta name="twitter:description" content="">
+        <meta name="twitter:image" content="media/be854ae6f2b7b06e283898d87b63d481/page-thumbnail.jpg">
+
+    <script language="Javascript" id="docversion-request-script">
+        window.docVersionRequest = window.jQuery.ajax({
+            url           : "media/experience-version-5e8f701a7f403.js",
+            dataType      : 'jsonp',
+            jsonp         : false, 
+            cache         : true,  
+            jsonpCallback : "loadDocVersion_v1_account_tablesafe_document_versions_experience_version_5e8f701a7f403",
+            success       : window.jQuery.noop 
+        });
+    </script>
+
+    <!--
+      FONTS
+    -->
+
+    
+
+
+
+    <script type="text/javascript">
+        window.cerosPlayerLoadStart = new Date();
+    </script>
+
+    <script
+            type="text/javascript"
+            crossorigin="anonymous"
+            src="assets/player/shared/libs/require/require-min.b03b66057d7df9b2cc9aa9c4c18aa569.js">
+    </script>
+
+    <script
+            type="text/javascript"
+            async
+            crossorigin="anonymous"
+            charset="UTF-8"
+            src="assets/player/applications/html5-player/bootstrap-optimized.4ab00587a4a4655a73836fdc3f6be4a5.js">
+    </script>
+
+    <link rel="stylesheet" type="text/css"
+          href="assets/player/applications/html5-player/css/html5-player.29da70e4e6644f09a6310b57463cab3b.css"/>
+
+    <style>
+        body {
+            background-color: #FFFFFF;
+        }
+
+        body:-ms-fullscreen::-ms-backdrop {
+            background-color: #FFFFFF;
+        }
+    </style>
+
+</head>
+<body>
+
+
+
+
+    <noscript>
+        
+            <div class="page"><div class="text-component">The 
+TableSafe
+Advantage</div>
+<div class="text-component">The only payment solution designed to be left with the guest at the end of the meal.
+ 
+Our secure, easy to use payment technology enables the guest to control the entire payment process in less than a minute without server assistance.
+
+Delivering a proven ROI, restaurants consistently recognize operational efficiencies, cost savings and increased sales revenue when deploying our solution. 
+ 
+We call this the TableSafe Advantage™
+</div>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/08/a5d09ecda529ab5eb0f490f3db5e018c/chevron-icon.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/08/a5d09ecda529ab5eb0f490f3db5e018c/chevron-icon.svg" alt=""  class="image-component"/>
+<div class="text-component">HOST AREA</div>
+<div class="text-component">GET STARTED</div>
+<img src="http://media-s3-us-east-1.ceros.com/redbull/images/2016/06/14/0feed43569b83d738965574cd1f65273/circle-icon.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/redbull/images/2016/06/14/0feed43569b83d738965574cd1f65273/circle-icon.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/redbull/images/2016/06/14/0feed43569b83d738965574cd1f65273/circle-icon.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/redbull/images/2016/06/14/0feed43569b83d738965574cd1f65273/circle-icon.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/redbull/images/2016/06/14/0feed43569b83d738965574cd1f65273/circle-icon.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/08/6dd4adaf316dea399c2c0023c18f0b19/x-icon.svg" alt=""  class="image-component"/>
+<img src="media/1def4cf9f22403602517231102449500/asset-1.png" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/561460690b547fba8883050fbf5c1fb3/bar-lights.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/23/102d3a6cb634f5a8fbafa39f180c3d46/bar02.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/9ef74dcc51f8cada62c894cbacc9edb9/indoor-guests-1.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/10/42413e87d8346720decf539eef7b404d/dining-guests.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/ba3be8d536ac61a301fe4d64212d19c6/3-guests.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/44c4f123bafc0a5188fe308902fd3e9c/entrance-pos.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/c2a3d0bdc6f96b7e166105a0a75f5901/enter-guest-1.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/617dfb99c790b8e2a9bc073fbd27a6ff/enter-guest-2.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/9ded86eeb886c7a9d1f65ef9af6e07ee/enter-guest-3.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/bd0e9a3bc3ef815658b95f303238f4b3/enter-guest-4.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/b591372978c9bab5bc3f1e18e153c217/small-divider.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/da3210e0c435d3fea9c6e963285731b7/waiting-guests.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/6291b6b0f6be7d35f78ef3210402bb2e/indoor-guests-2.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/38f373923ad0367b1dad38c808c54665/outdoor-floor.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/45fbe0f2defdb74a164b3f4578e42ea8/railing-front.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/bc83110cb607b703c2274534dc848272/railing-back.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/23/874497ed90a8570d6f33e689278af62f/outdoor-back-table.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/f47ab495af3f6f7db9d299b8e7053dfa/umbrella.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/52dd237d726d12e3c166147e69b5d35f/office-2.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/ffd389e1dbc42cd6cc83ed4096c99e71/people-in-office-1.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/8f64e0453db132d106121b5dcf4d1e45/office-wall.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/734d83a11f5614e5db53174e4ce254b1/floor.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/533b9df324f365b6e5b1b1d99c906550/back-wall.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/10/d22dd6ae458b91642d6f49959f5a3244/front-wall.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/f47ab495af3f6f7db9d299b8e7053dfa/umbrella.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/8ab4f17a083b79f81a6e91d455d8ef35/middle-wall.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/10/0734ac7d52687120488dbf44e3cc35f8/plus-icon.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/9ded86eeb886c7a9d1f65ef9af6e07ee/enter-guest-3.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/bd0e9a3bc3ef815658b95f303238f4b3/enter-guest-4.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/c2a3d0bdc6f96b7e166105a0a75f5901/enter-guest-1.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/617dfb99c790b8e2a9bc073fbd27a6ff/enter-guest-2.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/6e2695b1545b58a51ed25b5af308e52f/server-3.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/214357215d6f20436ec120d0250d1026/server-1.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/61df06cbefef680014c1c37f570ed368/server-2.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/6e2695b1545b58a51ed25b5af308e52f/server-3.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/6e2695b1545b58a51ed25b5af308e52f/server-3.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/61df06cbefef680014c1c37f570ed368/server-2.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/214357215d6f20436ec120d0250d1026/server-1.svg" alt=""  class="image-component"/>
+<img src="media/792a512908668c281d1c33ce09cc7ffc/host-area-final-sizing.jpg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/614c2937b98964c7e5eec6ad23a7b8f7/guests-icon.svg" alt=""  class="image-component"/>
+<div class="text-component">Guest Experience</div>
+<div class="text-component">Host Experience</div>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/23/d045bb12fdafb7ae54eff5b5a8679fe4/hostess.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/10/250eeb4a249317a942e23ce0f11a776d/plante.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/10/283c8bb11a27749d62c83299ee53d0c4/outdoor-plant.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/10/283c8bb11a27749d62c83299ee53d0c4/outdoor-plant.svg" alt=""  class="image-component"/>
+<div class="text-component">Patio or Outside Seating Area</div>
+<div class="text-component">GET STARTED</div>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/7057a91ee3544652d7b8816b902ac959/asset-12.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/cfed0d595b96d07ee687f7a165022b46/left-wall.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/redbull/images/2016/06/14/0feed43569b83d738965574cd1f65273/circle-icon.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/redbull/images/2016/06/14/0feed43569b83d738965574cd1f65273/circle-icon.svg" alt=""  class="image-component"/>
+<div class="text-component">Dining Area</div>
+<img src="http://media-s3-us-east-1.ceros.com/redbull/images/2016/06/14/0feed43569b83d738965574cd1f65273/circle-icon.svg" alt=""  class="image-component"/>
+<div class="text-component">GET STARTED</div>
+<div class="text-component">Guest Experience</div>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/614c2937b98964c7e5eec6ad23a7b8f7/guests-icon.svg" alt=""  class="image-component"/>
+<div class="text-component">Server Experience</div>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/4ac0724aebc7e19e1d60ff173b2d0f3d/restaurant-icon.svg" alt=""  class="image-component"/>
+<div class="text-component">Guest Experience</div>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/614c2937b98964c7e5eec6ad23a7b8f7/guests-icon.svg" alt=""  class="image-component"/>
+<div class="text-component">Server Experience</div>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/4ac0724aebc7e19e1d60ff173b2d0f3d/restaurant-icon.svg" alt=""  class="image-component"/>
+<div class="text-component">Banquet Area</div>
+<img src="http://media-s3-us-east-1.ceros.com/redbull/images/2016/06/14/0feed43569b83d738965574cd1f65273/circle-icon.svg" alt=""  class="image-component"/>
+<div class="text-component">Guest Experience</div>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/614c2937b98964c7e5eec6ad23a7b8f7/guests-icon.svg" alt=""  class="image-component"/>
+<div class="text-component">Server Experience</div>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/4ac0724aebc7e19e1d60ff173b2d0f3d/restaurant-icon.svg" alt=""  class="image-component"/>
+<div class="text-component">GET STARTED</div>
+<div class="text-component">Management Experience</div>
+<img src="http://media-s3-us-east-1.ceros.com/redbull/images/2016/06/14/0feed43569b83d738965574cd1f65273/circle-icon.svg" alt=""  class="image-component"/>
+<div class="text-component">General Manager</div>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/10/7d45a6597e9836b8f3f1657acd9fb471/management.svg" alt=""  class="image-component"/>
+<div class="text-component">Marketing</div>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/10/3996f976559a801b4ef0212ab537f7e6/marketing.svg" alt=""  class="image-component"/>
+<div class="text-component">GET STARTED</div>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/10/0734ac7d52687120488dbf44e3cc35f8/plus-icon.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/10/0734ac7d52687120488dbf44e3cc35f8/plus-icon.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/10/0734ac7d52687120488dbf44e3cc35f8/plus-icon.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/10/0734ac7d52687120488dbf44e3cc35f8/plus-icon.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/214357215d6f20436ec120d0250d1026/server-1.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/08/21/214357215d6f20436ec120d0250d1026/server-1.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/23/c7146199cb9cebbcd2732fb85e6e1463/bar-server-1.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/23/ac997ab29bb6cf416545e2ebee81672d/bar-server-2.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/23/a7903c5312460ffe253ef9c74c636e14/bar-server-3.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/23/ac997ab29bb6cf416545e2ebee81672d/bar-server-2.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/23/9f4b1d714d41c968cf488f9db2222561/bar-server-5.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/23/e2ce05a96865158d8c3bac24a8d4eb06/bar-server-6.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/23/ac997ab29bb6cf416545e2ebee81672d/bar-server-2.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/23/a7903c5312460ffe253ef9c74c636e14/bar-server-3.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/10/0734ac7d52687120488dbf44e3cc35f8/plus-icon.svg" alt=""  class="image-component"/>
+<div class="text-component">BaR Area</div>
+<img src="http://media-s3-us-east-1.ceros.com/redbull/images/2016/06/14/0feed43569b83d738965574cd1f65273/circle-icon.svg" alt=""  class="image-component"/>
+<div class="text-component">Bar Tender Experience</div>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/23/27b07b313560c646821e9cef3e70f3a1/bartender-icon.svg" alt=""  class="image-component"/>
+<div class="text-component">GET STARTED</div>
+<img src="http://media-s3-us-east-1.ceros.com/redbull/images/2016/06/14/0feed43569b83d738965574cd1f65273/circle-icon.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/23/fa67bb6a17f4185d2c7ed352a7ff87fc/patio-front-table.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/23/dd7157f58f270178073862a2ed80dc87/patio-back-table-1.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/23/e2abd9dec53bff23d0ff69479248268e/patio-server-1.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/23/e2d8474e18a9cedbc8c9962b6e3993d4/patio-server-2.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/23/12510b9877c5d40d78d9ae3aaf73c5a6/patio-server-3.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/23/cab827650c60b9b43a7bd7c2e7329ca1/patio-server-4.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/23/9b2d9d5987d6f04878b3b405c0a3381e/patio-server-5.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/23/cd7ac41ca9b96cb02d7eceb05eabb7fd/patio-server-6.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/23/6aa10b46dde835b8e8097231e97caf2b/plus-icon-hover.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/23/6aa10b46dde835b8e8097231e97caf2b/plus-icon-hover.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/23/6aa10b46dde835b8e8097231e97caf2b/plus-icon-hover.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/23/6aa10b46dde835b8e8097231e97caf2b/plus-icon-hover.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/23/6aa10b46dde835b8e8097231e97caf2b/plus-icon-hover.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/23/6aa10b46dde835b8e8097231e97caf2b/plus-icon-hover.svg" alt=""  class="image-component"/>
+<div class="text-component">Bar Area</div>
+<div class="text-component">Management Experience</div>
+<div class="text-component">Dining Area</div>
+<div class="text-component">Banquet Area</div>
+<div class="text-component">Patio Area</div>
+<div class="text-component">Hostess Area</div>
+<div class="text-component">GET STARTED</div>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/11/05/018d779d41e105ee7d6ac706edca943e/patio-back-table-2.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/11/05/590976a29903e0a9b9cbaa98386b6553/patio-back-table-3.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/11/05/a093381e76f1d186c829c534add56e6c/patio-back-table-4.svg" alt=""  class="image-component"/>
+<img src="http://media-s3-us-east-1.ceros.com/tablesafe/images/2019/10/23/dd7157f58f270178073862a2ed80dc87/patio-back-table-1.svg" alt=""  class="image-component"/>
+<img src="media/fad453b29863e5d90beb1726546faba2/patio-area-final-sizing.jpg" alt=""  class="image-component"/>
+<img src="media/eca37a36ec06f85fa1d1b19dd68559da/dining-area.jpeg" alt=""  class="image-component"/>
+<img src="media/6993cd035dd17892ec1bf2370e2f7794/banquet-area-final-sizing.jpg" alt=""  class="image-component"/>
+<img src="media/f7faea805d7729313dc13c74c7470e52/bar-area-final-sizing.jpg" alt=""  class="image-component"/>
+<img src="media/8989f55e48684b1f2722f3168125e171/management-final-sizing.jpg" alt=""  class="image-component"/>
+<div class="text-component">Fast, efficient and secure
+
+Ability to split checks by amount, item or equally
+
+Eliminates the risk of going home with the wrong credit card or paying erroneous charges
+
+Maintains privacy during the payment process
+
+
+</div>
+<div class="text-component">Removes the burden of creating separate checks
+
+Eliminates charges to the wrong credit card
+
+Digtial record of tips and tickets
+
+18% tip increase (on average)</div>
+<div class="text-component">Streamlines payment process for optimal service 
+
+Avoids walkouts and payment errors
+
+Ability to run tabs
+
+Elimination of server tip entries
+
+Ability to serve multiple guests with same device</div>
+<div class="text-component">End-of-shift efficiency (10 minutes saved per server)
+
+Digital record of receipts and guests' signature
+
+Protection from data breaches and chargebacks
+
+In-depth analytics of server performance, guest feedback and transaction details
+
+</div>
+<div class="text-component">Digital record of email addresses for 40% of paying guests
+
+Ability to promote restaurant specials, upcoming events, and return-visit incentives
+
+Customized survey with 80% response rate</div>
+<div class="text-component">Reduced wait time
+
+Faster take out service by eliminating the need for the host to close the payment at the POS terminal
+
+Higher level of security
+
+Credit card remains in the guest's possession</div>
+<div class="text-component">Faster seating service
+
+Ability to scan the floor for payment status of each table
+
+Real-time alerts of dissatified guests
+
+Streamlined process for take-out service
+</div>
+<div class="text-component">Eliminates the extended wait time for the server to return with the guest's bill from inside the restaurant
+
+Enables the guest to control the timing and payment method
+
+Credit card never leaves the guest's possession </div>
+<div class="text-component">Reduces the time spent at the POS terminal 
+
+Allows equal levels of service inside and outside of the restaurant
+
+Multiple servers can use the same folio
+
+</div>
+<div class="text-component">Fast, efficient, easy and secure
+
+Guest controls the timing, privacy and payment method
+
+Credit card and payment information protected at all times
+
+Guest can provide instant feedback on dining experience</div>
+<div class="text-component">Eliminates erroneous tip entries
+
+Removes the server from the payment process
+
+Increases engagement with guest
+
+18% increase in tips (on average)</div></div>
+    </noscript>
+
+
+<div id="main"></div>
+<div id="backgroundContainer"></div>
+
+
+
+    <!-- BEGIN CUSTOM HTML -->
+    
+    <!-- END CUSTOM HTML -->
+
+
+
+
+</body>
+</html>
